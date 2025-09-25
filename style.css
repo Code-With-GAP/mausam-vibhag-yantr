@@ -22,21 +22,46 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 20px;
-    max-width: 400px;
+    max-width: 350px;
     min-height: 500px;
     box-shadow: 5px 5px 16px rgb(30, 30, 37);
     display: flex;
     flex-direction: column;
     margin: 50px 50px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .weather-card:hover {
     transform: scale(1.05);
 }
 
+/* .header{
+    background: rgba(194, 111, 111, 0.95); 
+} */
+
+.heading{
+    color: rgb(25, 145, 25);
+    text-transform: capitalize;
+    /* display: inline-block; */
+    font-size: 35px;
+    animation: scroll-left 5s linear infinite;
+}
+
+@keyframes scroll-left {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
 .inputs{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
 }
 
