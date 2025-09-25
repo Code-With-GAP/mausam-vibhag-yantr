@@ -19,7 +19,7 @@ async function weatherApp() {
 		const data = await response.json();	
 		
 		if (!response.ok) {
-			weatherDiv.innerHTML="<p class='warning'>Something went wrong😔, try again latre.</p>"			
+			weatherDiv.innerHTML="<p class='warning'>Something went wrong😔, try again later.</p>"			
 		}
 
 		const weatherImages = {
@@ -65,7 +65,7 @@ async function weatherApp() {
 
 	} catch (error) {
 		console.error("Error fetching weather", error);
-		weatherDiv.innerHTML="<p class='warning'>Something went wrong😔, try again latre.</p>"
+		weatherDiv.innerHTML="<p class='warning'>Something went wrong😔, try again later.</p>"
 	}
 
 
