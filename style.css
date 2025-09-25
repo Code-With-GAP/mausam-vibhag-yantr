@@ -11,6 +11,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(to right, #4CAF50, #2196F3);
+    flex-wrap: wrap;
 }
 
 .container {
@@ -21,13 +22,12 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 20px;
-    width: 450px;
+    max-width: 400px;
     min-height: 500px;
     box-shadow: 5px 5px 16px rgb(30, 30, 37);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    margin: 50px 50px;
 }
 
 .weather-card:hover {
@@ -41,7 +41,7 @@ body {
 }
 
 #city-input {
-    padding: 20px;
+    padding: 15px;
     margin: 10px 0;
     width: 70%;
     border: 1px solid #ccc;
@@ -63,14 +63,14 @@ body {
 }
 
 #city-input-btn {
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
     border-radius: 1.1rem;
     border: none;
     padding: 10px;
     background-color: #2196F3;
     color: #fff;
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -95,7 +95,7 @@ body {
 }
 
 .imges{
-    width: 490px;
+    width: 100%;
 }
 
 
@@ -106,6 +106,11 @@ body {
     width: 170px;
     border: 1px solid white;
     background: #b5d4d4;
+}
+
+
+@media max {
+    
 }
 
 
