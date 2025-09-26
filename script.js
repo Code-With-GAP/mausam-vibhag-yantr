@@ -64,17 +64,17 @@ async function weatherApp() {
 
 		weatherDiv.innerHTML=`
 
-		<h2 style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:30px;">${data.name}</h2>
+		<h2 style="color:black; font-weight:900; font-size:30px;">${data.name}</h2>
 
 		<div class="info-div">
 
-		<div style="color:white; font-weight:800; -webkit-text-stroke: 1.5px black; font-size:60px;" class="temperature">${Math.round(data.main.temp)}°C</div>
+		<div style="color:white; font-weight:900; -webkit-text-stroke: 1.5px black; font-size:60px;" class="temperature">${Math.round(data.main.temp)}°C</div>
 
-		<div style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:20px; text-transform:capitalize;" class="description"> ${data.weather[0].description}</div>
+		<div style="color:black; font-weight:900; font-size:20px; text-transform:capitalize;" class="description"> ${data.weather[0].description}</div>
 
-		<div style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:20px;">${timeOfDay}</div>
+		<div style="color:black; font-weight:900; font-size:20px;">${timeOfDay}</div>
 
-		<div style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:20px;" class="wind">Wind: ${data.wind.speed} m/s</div>
+		<div style="color:black; font-weight:900; font-size:20px;" class="wind">Wind: ${data.wind.speed} m/s</div>
 
 		</div>
 
