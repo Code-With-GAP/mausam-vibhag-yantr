@@ -45,7 +45,7 @@ body {
     text-transform: capitalize;
     /* display: inline-block; */
     font-size: 35px;
-    animation: scroll-left 5s linear infinite;
+    animation: scroll-left 7s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -66,34 +66,34 @@ body {
 }
 
 #city-input {
-    padding: 15px;
+    padding: 12px;
     margin: 10px 0;
     width: 70%;
     border: 1px solid #ccc;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 26px;
     outline: none;
     border: none;
     background: #4a7777;
     box-shadow: 7px 7px 10px rgba(8, 8, 8, 0.979);
     color: white;
-    font-size: 30px;
     transition: all 0.9s ease;
     text-transform: capitalize;
 }
 
 #city-input::placeholder {
     color: #faf6f6;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 #city-input-btn {
-    height: 65px;
-    width: 65px;
+    height: 55px;
+    width: 55px;
     border-radius: 1.1rem;
     border: none;
     padding: 10px;
     background-color: #2196F3;
+    box-shadow: 5px 5px 10px rgba(8, 8, 8, 0.979);
     color: #fff;
     font-size: 30px;
     cursor: pointer;
@@ -136,9 +136,7 @@ body {
 }
 
 
-@media max {
-    
-}
+
 
 
 
