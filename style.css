@@ -19,7 +19,7 @@ body {
 }
 
 .weather-card {
-    background-color: rgba(236, 223, 223, 0.95);
+    background-color: rgba(44, 42, 42, 0.95);
     border-radius: 20px;
     padding: 20px;
     max-width: 350px;
@@ -112,6 +112,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.info-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-top: 70px;
+}
+
 
 #icon-div{
     display: flex;

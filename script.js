@@ -51,23 +51,33 @@ async function weatherApp() {
 
 
 		const description  = data.weather[0].description.toLowerCase();
-		const image  =  weatherImages[description] || "https://yourdomain.com/images/default.jpg";
+		const image = weatherImages[description] || "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_640.jpg"
+		document.querySelector(".weather-card").style.backgroundImage = `url('${image}')`;
+		document.querySelector(".weather-card").style.backgroundSize = "cover";
+		document.querySelector(".weather-card").style.backgroundPosition = "center";
+		document.querySelector(".weather-card").style.color = "white"
+
 		const iconCode = data.weather[0].icon;
 		const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+		const timeOfDay = iconCode.endsWith('d') ? "Daytime ☀️" : "Nighttime 🌙";
 
 
 		weatherDiv.innerHTML=`
-		<h2 style="color:blue;">${data.name}</h2>
-		<img src="${image}" alt="${description}" class="imges">
-		<h3 style="color:purple;">Temperature: ${Math.round(data.main.temp)} °C</h3>
-		<div id="icon-div">
-			<div><h3 style="color:dark grey; text-transform:capitalize;">${data.	weather[0].description}
-		 	</h3>
-			</div>
 
-			<div><img class="icon" src="${iconUrl}" alt="weather icon"></div> 
+		<h2 style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:30px;">${data.name}</h2>
+
+		<div class="info-div">
+
+		<div style="color:white; font-weight:800; -webkit-text-stroke: 1.5px black; font-size:60px;" class="temperature">${Math.round(data.main.temp)}°C</div>
+
+		<div style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:20px; text-transform:capitalize;" class="description"> ${data.weather[0].description}</div>
+
+		<div style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:20px;">${timeOfDay}</div>
+
+		<div style="color:white; font-weight:900; -webkit-text-stroke: 1px black; font-size:20px;" class="wind">Wind: ${data.wind.speed} m/s</div>
+
 		</div>
-		<h3 style="color:black;">${data.wind.speed} m/s</h3>
+
 		`;
 
 
@@ -111,9 +121,9 @@ input.addEventListener("input", () => {
 
 
 
+// <img src="${image}" alt="${description}" class="imges">//
 
-
-
+// <div class="feels-like">Feels Like:${Math.round(data.main.feels_like)}°C</div>//
 
 
 
