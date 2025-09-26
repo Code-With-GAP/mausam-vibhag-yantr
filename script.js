@@ -27,7 +27,7 @@ async function weatherApp() {
 
 			"clear sky": "https://cdn.pixabay.com/photo/2022/04/26/13/04/sky-7158340_640.jpg",
 
-  			"few clouds": "https://cdn.pixabay.com/photo/2023/05/30/15/53/landscape-8029037_640.jpg",
+  			"few clouds": "https://media.istockphoto.com/id/867661806/photo/three-white-fkuffy-small-clouds-on-the-light-blue-sky.webp?b=1&s=612x612&w=0&k=20&c=sIlHtLqJNWrSJt57WbdyYzEbCIqieWe1CJHzJmB3XHE=",
 
   			"scattered clouds": "https://cdn.pixabay.com/photo/2018/05/13/10/13/sky-3395811_640.jpg",
 
@@ -43,7 +43,10 @@ async function weatherApp() {
 
   			"snow": "https://cdn.pixabay.com/photo/2016/12/04/21/22/snowman-1882635_640.jpg",
 
-  			"mist": "https://cdn.pixabay.com/photo/2014/01/07/18/34/fog-240075_1280.jpg"
+  			"mist": "https://cdn.pixabay.com/photo/2014/01/07/18/34/fog-240075_1280.jpg",
+
+			"fog":"https://media.istockphoto.com/id/185595085/photo/driving-car-in-the-fog.webp?b=1&s=612x612&w=0&k=20&c=d-wJwBpUdm4fUb8XGcEQeqLSAQ9FtJmfpcGm-7DKWR0="
+
 		};
 
 
@@ -54,12 +57,17 @@ async function weatherApp() {
 
 
 		weatherDiv.innerHTML=`
-		<h2>${data.name}</h2>
-		<!--- <img src="${iconUrl}" alt="weather icon"> --->
+		<h2 style="color:blue;">${data.name}</h2>
 		<img src="${image}" alt="${description}" class="imges">
-		<h3>Temperature: ${Math.round(data.main.temp)} °C</h3>
-		<h3>${data.weather[0].description}</h3>
-		<h3>${data.wind.speed} m/s</h3>
+		<h3 style="color:purple;">Temperature: ${Math.round(data.main.temp)} °C</h3>
+		<div id="icon-div">
+			<div><h3 style="color:dark grey; text-transform:capitalize;">${data.	weather[0].description}
+		 	</h3>
+			</div>
+
+			<div><img class="icon" src="${iconUrl}" alt="weather icon"></div> 
+		</div>
+		<h3 style="color:black;">${data.wind.speed} m/s</h3>
 		`;
 
 
