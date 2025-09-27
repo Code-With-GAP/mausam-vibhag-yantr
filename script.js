@@ -10,6 +10,9 @@ async function weatherApp() {
 	const inputValue = input.value.trim();
 	if (inputValue==="") {
 		weatherDiv.innerHTML="<p class='warning'>please enter a city name first 😒.</p>"
+
+		const card = document.querySelector(".weather-card");
+		card.removeAttribute("style");
 		return;
 	}
 	weatherDiv.innerHTML=""
@@ -19,7 +22,7 @@ async function weatherApp() {
 		const data = await response.json();	
 		
 		if (!response.ok) {
-			weatherDiv.innerHTML="<p class='warning'>Something went wrong😔, try again later.</p>"			
+			weatherDiv.innerHTML="<p class='warning'>Something went wrong.</p>"			
 		}
 
 		const weatherImages = {
@@ -83,7 +86,7 @@ async function weatherApp() {
 
 	} catch (error) {
 		console.error("Error fetching weather", error);
-		weatherDiv.innerHTML="<p class='warning'>Something went wrong😔, try again later.</p>"
+		weatherDiv.innerHTML="<p class='warning'>This is'nt a city</p>"
 	}
 
 
